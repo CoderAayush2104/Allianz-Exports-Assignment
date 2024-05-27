@@ -1,0 +1,103 @@
+[
+    {
+      "Rank": 1,
+      "Name": "Selling with re entr",
+      "Calmar_Ratio": 3.96,
+      "Overall_Profit": 381845,
+      "Avg_Daily_Profit": 319.54,
+      "Win": 0.65,
+      "Price": null,
+      "Action": "View"
+    },
+    {
+      "Rank": 2,
+      "Name": "strategy_name",
+      "Calmar_Ratio": 3.62,
+      "Overall_Profit": 268872.5,
+      "Avg_Daily_Profit": 216.31,
+      "Win": 0.64,
+      "Price": 500,
+      "Action": "Buy"
+    },
+    {
+      "Rank": 3,
+      "Name": "Based on premium and",
+      "Calmar_Ratio": 3.42,
+      "Overall_Profit": -255425,
+      "Avg_Daily_Profit": -208.51,
+      "Win": 0.64,
+      "Price": null,
+      "Action": "View"
+    },
+    {
+      "Rank": 4,
+      "Name": "strategy_name",
+      "Calmar_Ratio": 3.22,
+      "Overall_Profit": 370845,
+      "Avg_Daily_Profit": -303.47,
+      "Win": 0.65,
+      "Price": null,
+      "Action": "View"
+    },
+    {
+      "Rank": 5,
+      "Name": "strategy_name",
+      "Calmar_Ratio": 3.22,
+      "Overall_Profit": 370845,
+      "Avg_Daily_Profit": 303.47,
+      "Win": 0.65,
+      "Price": null,
+      "Action": "View"
+    },
+    {
+      "Rank": 6,
+      "Name": "Based on premium wit",
+      "Calmar_Ratio": 3.01,
+      "Overall_Profit": 135980,
+      "Avg_Daily_Profit": 185.77,
+      "Win": 0.49,
+      "Price": null,
+      "Action": "View"
+    },
+    {
+      "Rank": 7,
+      "Name": "strategy_name",
+      "Calmar_Ratio": 2.76,
+      "Overall_Profit": 267867.5,
+      "Avg_Daily_Profit": 218.49,
+      "Win": 0.6,
+      "Price": null,
+      "Action": "View"
+    },
+    {
+      "Rank": 8,
+      "Name": "Wait and trade_Save",
+      "Calmar_Ratio": 2.62,
+      "Overall_Profit": 178252.5,
+      "Avg_Daily_Profit": 161.9,
+      "Win": 0.63,
+      "Price": null,
+      "Action": "View"
+    },
+    {
+      "Rank": 9,
+      "Name": "iron condor",
+      "Calmar_Ratio": 2.44,
+      "Overall_Profit": -176420,
+      "Avg_Daily_Profit": 137.51,
+      "Win": 0.65,
+      "Price": null,
+      "Action": "View"
+    },
+    {
+      "Rank": 10,
+      "Name": "strategy_name",
+      "Calmar_Ratio": 2.04,
+      "Overall_Profit": 244555,
+      "Avg_Daily_Profit": -198.66,
+      "Win": 0.62,
+      "Price": null,
+      "Action": "View"
+    }
+  ]
+  

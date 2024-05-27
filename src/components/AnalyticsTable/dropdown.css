@@ -1,0 +1,203 @@
+
+:root {
+    --hue: 223;
+    --bg: #FDF6F9;
+    --fg: #1c1717;
+    --trans-dur: 0.3s;
+    --trans-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --trans-ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+    font-size: calc(20px + (40 - 20) * (100vw - 280px) / (3840 - 280));
+}
+button {
+    color: var(--fg);
+    font-family: 'Poppins';
+    font-size: 15px;
+    transition: background-color var(--trans-dur), color var(--trans-dur);
+}
+
+.drop {
+    
+    --drop-trans-dur: 0.5s;
+    --drop-flare-dist: 0;
+    border-radius: 0.5em 0.5em 0 0;
+    
+    padding: 0.25em 0.25em 0 0.25em;
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    
+    top: 30%;
+    right: 0;
+    min-height: 2em;
+    
+}
+.slippage{
+    color: whitesmoke;
+    padding-top: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    z-index: 2;
+}
+.dropdown-container{
+    display: flex;
+    flex-direction: column;
+}
+.drop, .drop:after {
+    background-color:#E27498;
+    transition: background-color var(--trans-dur);
+}
+.drop:before, .drop:after {
+    content: "";
+    position: absolute;
+}
+.drop:before {
+    background-image: radial-gradient(100% 100% at 100% 50%, #E27498, rgba(242, 13, 13, 0) 50%);
+    display: none;
+    right: 0;
+    bottom: 100%;
+    width: 9em;
+    height: 9em;
+}
+.drop:after {
+    border-radius: 0.4375em;
+    display: block;
+    top: 0.125em;
+    left: 0.125em;
+    width: calc(100% - 0.25em);
+    height: calc(100% - 0.25em);
+}
+.drop__btn {
+    border: 0;
+    background-color: #FDF6F9;
+    border-radius: 0.375em;
+    box-shadow: 0 0 0 0.25em rgba(242, 13, 13, 0);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    
+    height: 2em;
+    outline: transparent;
+    margin-bottom: 0.25em;
+    padding: 0.75em;
+    position: relative;
+    width: 5em;
+    transition: background-color var(--trans-dur), box-shadow calc(var(--trans-dur) / 2) var(--trans-ease-in-out), color var(--drop-trans-dur);
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 1;
+}
+.drop__btn:hover, .drop__btn:focus-visible, .drop__btn[aria-expanded="true"] {
+    background-color: #f4f1f1;
+}
+/* .drop__btn:focus-visible {
+    box-shadow: 0 0 0 0.25em pink;
+} */
+.drop__btn:after {
+    border-top: 0.375em solid currentColor;
+    border-right: 0.375em solid transparent;
+    border-left: 0.375em solid transparent;
+    content: "";
+    display: block;
+    margin-inline-start: auto;
+    width: 0;
+    height: 0;
+    transform-origin: 50% 37.5%;
+    transition: transform var(--drop-trans-dur) var(--trans-ease-out);
+}
+.drop__btn[aria-expanded="true"]:after {
+    transform: rotate(0.5turn);
+}
+
+.drop--collapsing, .drop--expanding, .drop__items {
+    overflow: hidden;
+}
+.drop__items {
+    height: 0;
+}
+.drop__items-inner {
+    visibility: hidden;
+}
+.drop--collapsing .drop__btn[aria-expanded="true"] {
+    background-color: #FDF6F9;
+}
+.drop--collapsing .drop__btn[aria-expanded="true"]:after {
+    transform: rotate(0);
+}
+.drop--expanding:before {
+    display: block;
+}
+.drop__items .drop__btn:hover, .drop__items .drop__btn:focus-visible {
+    background-color: #f9f8f8;
+    color: rgba(242, 13, 13, );
+}
+.drop__items .drop__btn:focus-visible {
+    box-shadow: 0 0 0 0.25em rgba(242, 13, 13, 0);
+}
+.drop__items .drop__btn:after {
+    border: 0;
+    content: "\2713";
+    display: none;
+    width: auto;
+    height: auto;
+}
+.drop__items .drop__btn--selected:after {
+    display: block;
+}
+.drop__btn[aria-expanded="true"] ~ .drop__items {
+    height: auto;
+}
+.drop__btn[aria-expanded="true"] ~ .drop__items .drop__items-inner {
+    visibility: visible;
+}
+.drop:has([aria-expanded="true"]) {
+    border-radius: 0.5em;
+    height: auto;
+}
+.drop:has([aria-expanded="true"]):before {
+    transform: translateY(calc(9em + var(--drop-flare-dist)));
+    transition: transform var(--drop-trans-dur) linear;
+}
+/* Dark theme */
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1c1717;
+        --fg: #e8e3e3;
+   }
+    .drop, .drop:after {
+        background-color: #000;
+   }
+    .drop__btn {
+        background-color: #1c1717;
+   }
+    .drop__btn:hover, .drop__btn:focus-visible, .drop__btn[aria-expanded="true"] {
+        background-color: #382e2e;
+   }
+    .drop__items .drop__btn:hover, .drop__items .drop__btn:focus-visible {
+        background-color: #2a2222;
+        color: rgba(247, 110, 110, );
+   }
+    .drop--collapsing .drop__btn[aria-expanded="true"] {
+        background-color: #1c1717;
+   }
+} */
+@media screen and (max-width:768px) {
+    
+    .drop{
+        
+        top: 20%;
+    }
+    .slippage{
+        font-size: 12.5px;
+        padding: 0;
+    }
+    .drop__btn{
+        height: 1em;
+        width: 4em;
+    }
+}
